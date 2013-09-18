@@ -47,22 +47,31 @@ Group: Stewart Smith and Kaushal Parikh\\
     log(n!) = log(1) + log(2) + \cdots + log(n) \leq{log(n) + log(n) + \cdots  + log(n)}\\
     log(n!) \in O(nlogn)\\
 
-\item (a) Assume: \sum_{i=1}^k i(i+1) = \frac1 3 k(k+1)(k+2)\\
+\item (a)
+    Base Case: for k=2 \sum_{i=1}^k i(i+1) = 8
+    Assume: \sum_{i=1}^k i(i+1) = \frac1 3 k(k+1)(k+2)\\
     Prove:  \sum_{i=1}^{(k+1)} i(i+1) = \frac1 3 (k+1)(k+2)(k+3)\\
     \sum_{i=1}^{(k+1)} i(i+1) = \sum_{i=1}^k i(i+1) + (k+1)(k+2)\\
     = \frac1 3 k(k+1)(k+2) + (k+1)(k+2)\\
     = (k+1)(k+2) (\frac k3 + 1)\\
     = \frac1 3 (k+1)(k+2)(k+3)\\
+    \\
     (b)\\
+    Base Case: for k=1 \sum_{i=0}^k i2^i = 2
     Assume: \sum_{i=0}^k i2^i = (k-1)2^{k+1}+2\\
     Prove:  \sum_{i=0}^{k+1} i2^i = k2^{k+2}+2\\
     = \sum_{i=0}^k i2^i + (k+1)2^{k+1}\\
     = (k-1)2^{k+1}+2 + (k+1)2^{k+1}\\
     = 2^{k+1}(2k)\\
     = k2^{k+2} + 2\\
+    \\
     (c)\\
-    Assume: \sum_{i=0}^k \frac i2^{i} = (k-1)2^{k+1}+2\\
-
+    Base Case: for k=1 \sum_{i=0}^k \frac i{2^i} = \frac 1 2
+    Assume: \sum_{i=0}^k \frac i{2^i} = 2- \frac {k+2}{2^k}\\
+    Prove: \sum_{i=0}^{k+1} \frac i{2^i} = 2- \frac {k+3}{2^{k+1}}\\
+    =\sum_{i=0}^k \frac i{2^i} + \frac {k+1}{2^{k+1}}\\
+    = 2- \frac {k+2}{2^k} + \frac {k+1}{2^{k+1}}\\\\
+    = 2- \frac {k+3}{2^{k+1}}\\
 
 \end{enumerate}
 
