@@ -1,0 +1,50 @@
+
+
+
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage{amsthm,amsmath,amsfonts,amssymb,amstext}
+\usepackage{latexsym,ifthen,url,rotating}
+\usepackage[usenames,dvipsnames]{color}
+
+
+% --- -----------------------------------------------------------------
+% --- Document-specific definitions.
+% --- -----------------------------------------------------------------
+\newtheorem{definition}{Definition}
+
+\newcommand{\concat}{{\,\|\,}}
+\newcommand{\bits}{\{0,1\}}
+\newcommand{\Range}{{\mathrm{Range}}}
+\newcommand{\A}{{\mathcal{A}}}
+
+% --- -----------------------------------------------------------------
+% --- The document starts here.
+% --- -----------------------------------------------------------------
+\begin{document}
+%\maketitle
+\sloppy
+
+CS513: Design and Analysis of Data Structures and Algorithms \\
+Group: Stewart Smith and Kaushal Parikh\\
+
+\begin{center}
+\LARGE{\textbf{Homework 1}}\\
+\end{center}
+
+\vspace{.1in}
+
+\noindent\textbf{Instructions:} Point values for each problem are listed.
+Write your solutions neatly or type them up.  Typed solutions will also be
+accepted via Sakai.
+
+\begin{enumerate}
+
+
+        
+\end{enumerate}
+
+
+\end{document}
+
