@@ -60,15 +60,25 @@ Group: Stewart Smith and Kaushal Parikh\\
     = 2^{k+1}(2k)\\
     = k2^{k+2} + 2\\
     (c)\\
-    Assume: \sum_{i=0}^k \frac i2^{i} = (k-1)2^{k+1}+2\\
-    \item
-        \begin{itemize}
-            \item Assume the Minimal Spanning Tree is not unique, but a T1 and T2 exist and are ezual 
-            \item There exists an edge e1 in T1, and not in T2 
-            \item There exists an edge e2 in T2, and not in T1
-            \item If T1 is an MST, then \ldots
-        \end{itemize} 
+    Assume: $\sum_{i=0}^k \frac i2^{i} = (k-1)2^{k+1}+2$\\
 
+\item
+    consult and fill in
+
+\item
+            \tab a) Assume the Minimal Spanning Tree is not unique, but a T1 and T2 exist and are ezual \\
+            \tab b) There exists an edge e1 in T1, and not in T2 \\
+            \tab c) There exists an edge e2 in T2, and not in T1 \\
+            \tab d) If T1 is an MST, then e2 + T1 must contain a cycle \\
+            \tab e) Assume e1 \textgreater  e2 \\
+            \tab f) In this case [(e2 + T2) - e1 \textless  T2] should be true but isn't \\
+            \tab g) Thus, by contradiction we find that we can have one and only one unique minimal spanning tree \\
+
+\item \\
+    \tab Within HamP(G, u, v)\\
+    \tab a) connect u and v with an edge, this produces a new graph H\\
+    \tab b) run HamC(H) where H is the new graph with a path from u -\textgreater v\\
+    \tab c) if HamC(H) returns true, then you should return true for HamP(G, u, v)\\
 \end{enumerate}
 
 \end{document}
