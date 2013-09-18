@@ -24,7 +24,6 @@
 % --- -----------------------------------------------------------------
 \begin{document}
 %\maketitle
-\sloppy
 
 \noindent CS513: Design and Analysis of Data Structures and Algorithms \\
 Group: Stewart Smith and Kaushal Parikh\\
@@ -34,6 +33,7 @@ Group: Stewart Smith and Kaushal Parikh\\
 \end{center}
 
 \vspace{.1in}
+
 
 \begin{enumerate}
 
@@ -74,7 +74,32 @@ Group: Stewart Smith and Kaushal Parikh\\
 
 
 \item
-    consult and fill in
+    \tab a)\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{4n}{logn} = \infty$\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{logn}{4n}= 0$\\
+    \tab \tab This shows us that $logn$ has a lower asymptotic order than $4n$\\ \\
+    \tab b)\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{nlogn}{4n} = \infty$\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{4n}{nlogn}= 0$\\
+    \tab \tab This shows us that $4n$ has a lower asymptotic order than $nlogn$\\ \\
+    \tab c)\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{nlnn}{nlogn} = 1$\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{nlogn}{nlnn} = 1$\\
+    \tab \tab This shows us that $nlogn$ and $nlnn$ have the same asymptotic order\\ \\
+    \tab d)\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{n^2}{nlogn} = \infty$\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{nlogn}{n^2} = 0$\\
+    \tab \tab This shows us that $nlogn$ has a lower asymptotic order than $n^2$\\ \\
+    \tab e)\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{e^n}{n^2} = \infty$\\
+    \tab \tab $\lim \limits_{n \to \infty} \frac{n^2}{e^n} = 0$\\
+    \tab \tab This shows us that $n^2$ has a lower asymptotic order than $e^n$\\ \\
+    
+    \tab Thus, the functions in asymptiotic order is: \\
+    \tab $logn$, $4n$, $nlogn$/$nlnn$, $n^2$, $e^n$ \\
+
+
+
 
 \item
             \tab a) Assume the Minimal Spanning Tree is not unique, but a T1 and T2 exist and are ezual \\
