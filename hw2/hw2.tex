@@ -55,7 +55,19 @@ Group: Stewart Smith and Kaushal Parikh\\
         = T(n^2)\\
     \item \\
     \item \\
-    \item \\
+    \item Originally the rectangular array is given to us with it's row in ascending order\\
+          We then take each of the columns and sort them.\\
+          \begin{tabbing}
+          Lemma: The smallest  item in a row is $>$ the smallest item in the previous row\\ \\
+          Proof:\\$a b c \\  
+           d e f \\ 
+           g h i \\ $
+                  \\1) If e is the lightest element in row 2 we know that d $<$ e
+                  \\2) Thus when we sort row 1, we will have d or something $<$ d be the lighest element
+                  \\3) This shows us that our lemma holds true\\
+          \end{tabbing}
+          \\We know that this works for the first row, and so by induction, it will also work for all subsequent rows\\
+
     \item Algorithm:
         \begin{verbatim}
                     HamC(G):
