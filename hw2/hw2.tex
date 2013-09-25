@@ -41,10 +41,34 @@
             \item \\
             \item \\
             \item \\
-            \item \\
-            \item \\
-            \item \\
-            
+            \item Algorithm:
+                    \begin{verbatim}
+                    HamC(G):
+                        for each pair of neighbors(n1, n2):
+                            if HamP(n1, n2, G):
+                                return true
+                        return false
+                    \end{verbatim}
+
+                    This approach will tell us if our graph has an hamiltonian circuit. \\
+                    We are going through each pair of neighbors, which for a fully connect graph is going to be $n^2$ complexity\\
+                    That makes our big O run time for the algorithm $n^2 * n^c = O(n^c)$, polynomial time\\
+                    \\
+            \item
+               Algorithm:
+               \begin{verbatim}
+                findPath(n1, n2):
+                    newPath
+                    for each neighbor of n1 s:
+                        if HamP(s, n1):
+                            append s to newPath
+                            findPath(s, n1)
+               \end{verbatim}\\
+
+               This approach will find us a hamiltonian path.\\
+               The solution is to go to each neighbor and run the findPath algorithm on it again. \\
+               This makes a new graph that consists only of the hamiltonian path.\\
+
             \end{enumerate}
 
                                 \end{document}
