@@ -26,26 +26,77 @@
 %\maketitle
 
 \noindent CS513: Design and Analysis of Data Structures and Algorithms \\
-        Group: Stewart Smith and Kaushal Parikh\\
+Group: Stewart Smith and Kaushal Parikh\\
 
-        \begin{center}
-        \LARGE{\textbf{Homework 1}}\\
-            \end{center}
+\begin{center}
+    \LARGE{\textbf{Homework 2}}\\
+\end{center}
 
-            \vspace{.1in}
+\vspace{.1in}
 
 
-            \begin{enumerate}
+\begin{enumerate}
 
-            \item \\
-            \item \\
-            \item \\
-            \item \\
-            \item \\
-            \item \\
-            \item \\
-            
-            \end{enumerate}
+    \item \\
+        T(n) = 2T(n/2)+\log n
+        f(n) = \log n \\
+        a = 2, b = 2 \\
+        a > \log _2 2 \\
+        $ via Master Theorem \\$
+        T(n) = \Theta(n ^ {(\log _b a)}) = \Theta(n)\\
+    \item \\
+    \item \\
+        $Suppose: $ T(n) = n ^{1 - 2 ^ {-\log{\log{n}}}} + n\log{\log{n}}\\
+        $Prove: $ T(n^2) = nT(n) + n^2\\
+        = n(n ^{1 - 2 ^ {-\log{\log{n}}}} + n\log{\log{n}}) + n^2\\
+        = n ^{2 - 2 ^ {1-(1+\log{\log{n}})}} + n^2(1+\log{\log{n}})\\
+        = n ^{2 - 2 ^ {1-\log{\log{n^2}}}} + n^2\log{\log{n^2}}\\
+        = (n^2)^{2 - 2 ^ {1-\log{\log{n^2}}}} + n^2\log{\log{n^2}}\\
+        = T(n^2)\\
+    \item \\
+    \item \\
+    \item Originally the rectangular array is given to us with it's row in ascending order\\
+          We then take each of the columns and sort them.\\
+          \begin{tabbing}
+          Lemma: The smallest  item in a row is $>$ the smallest item in the previous row\\ \\
+          Proof:\\$a b c \\  
+           d e f \\ 
+           g h i \\ $
+                  \\1) If e is the lightest element in row 2 we know that d $<$ e
+                  \\2) Thus when we sort row 1, we will have d or something $<$ d be the lighest element
+                  \\3) This shows us that our lemma holds true\\
+          \end{tabbing}
+          \\We know that this works for the first row, and so by induction, it will also work for all subsequent rows\\
 
-                                \end{document}
+    \item Algorithm:
+        \begin{verbatim}
+                    HamC(G):
+                        for each pair of neighbors(n1, n2):
+                            if HamP(n1, n2, G):
+                                return true
+                        return false
+                    \end{verbatim}
+
+                    This approach will tell us if our graph has an hamiltonian circuit. \\
+                    We are going through each pair of neighbors, which for a fully connect graph is going to be $n^2$ complexity\\
+                    That makes our big O run time for the algorithm $n^2 * n^c = O(n^c)$, polynomial time\\
+                    \\
+                \item
+                    Algorithm:
+                    \begin{verbatim}
+                findPath(n1, n2):
+                    newPath
+                    for each neighbor of n1 s:
+                        if HamP(s, n1):
+                            append s to newPath
+                            findPath(s, n1)
+               \end{verbatim}\\
+
+               This approach will find us a hamiltonian path.\\
+               The solution is to go to each neighbor and run the findPath algorithm on it again. \\
+               This makes a new graph that consists only of the hamiltonian path.\\
+
+       \end{enumerate}
+
+       \end{document}
 
