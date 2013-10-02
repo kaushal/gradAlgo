@@ -59,7 +59,7 @@
             Suppose that graph G has n nodes and $n-1$ edges.  Graph G' is identical but with n edges
             We can only make G and G' identical by deleting an edge from G'.  G' has a cycle because all
             n edges connect n nodes with 1 edge left over.  This edge makes a cycle.
-            \item \\
+            \item \\ a) \\
             \item \\
             $F(n+2) = F(n+1) + F(n)$\\
             $F(n+1) = F(n) + F(n-1)$\\
@@ -67,8 +67,9 @@
             $F(2) = F(1) + F(0)$\\
             $F(1) = F(0) + 1$\\
             \item \\
-            \item \\
-            
+            \item \\ Reduce Hamiltonian path to BDST\\
+                1) Given a graph G with vertices U and V. Create a Graph M by attaching new nodes P & Q respectively to U and V.\\
+                2) Let k represent the max number of edges and let k = 2. BDST(M,K=2) forces the spanning tree to be a path. Connect P $&$ Q to force the path to start and end with U and V. We reduced the hamiltonian path to BDST. The hamiltonian path, therefore isn't polynomial, and implies that BDST isn't polynomial either.
             \end{enumerate}
 
                                 \end{document}
