@@ -38,6 +38,10 @@
             \begin{enumerate}
 
             \item \\
+            Maintain a heap of size $k+1$.  To insert the first k+1 elements into the heap is O(k).
+            I would then retrieve the smallest element from the heap in O(logk) time and put it into
+            a sorted array.  Then we could take the k+2 element from the unsorted array and insert it
+            into the heap.  This final run time would be O(nlogk).
             \item \\
             \item \\
             We need to prove that a \& b $\implies$ c, a \& c $\implies$ b, and b \& c $\implies$ a\\
@@ -67,6 +71,10 @@
             $F(2) = F(1) + F(0)$\\
             $F(1) = F(0) + 1$\\
             \item \\
+            Take each element in the unsorted array and make it a node in graph G.  Node $u$ is the smallest
+            element and node $v$ is the largest element.  If we construct edges between all nodes of the graph
+            and we run Ham-Path on the graph, one of the paths will be the sorted array.  With a polynomial run-time
+            for Ham-Path, we have found a polynomial run-time for sorting.
             \item \\ Reduce Hamiltonian path to BDST\\
                 1) Given a graph G with vertices U and V. Create a Graph M by attaching new nodes P & Q respectively to U and V.\\
                 2) Let k represent the max number of edges and let k = 2. BDST(M,K=2) forces the spanning tree to be a path. Connect P $&$ Q to force the path to start and end with U and V. We reduced the hamiltonian path to BDST. The hamiltonian path, therefore isn't polynomial, and implies that BDST isn't polynomial either.
