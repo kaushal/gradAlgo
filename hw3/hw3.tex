@@ -29,7 +29,7 @@
         Group: Stewart Smith and Kaushal Parikh\\
 
         \begin{center}
-        \LARGE{\textbf{Homework 1}}\\
+        \LARGE{\textbf{Homework 3}}\\
             \end{center}
 
             \vspace{.1in}
@@ -38,8 +38,27 @@
             \begin{enumerate}
 
             \item \\
+            \item
             \item \\
-            \item \\
+            We need to prove that a \& b $\implies$ c, a \& c $\implies$ b, and b \& c $\implies$ a\\
+            \newline
+            Statement b) is equivalent to $edges\geq n-1$\\
+            We prove this through induction.  Base case $n=2$, $edges\geq1$\\
+            Assume: with n nodes $edges\geq n-1$\\
+            Prove: with $n+1$ nodes $edges\geq n$\\
+            Suppose that graph G has n nodes and $n-1$ edges.  Graph G' is identical to G but with
+            one more vertex than G.  In order to make G identical to G' we need to add one vertex and
+            to connect it, 1 edge.
+            \newline
+            \newline
+            Statement c) is equivalent to $edges\leq n-1$\\
+            This is also proven through induction
+            Base case $n=2$, $edges\leq1$\\
+            Assume: with n nodes $edges\leq n-1$\\
+            Prove: with $n+1$ nodes $edges\leq n$\\
+            Suppose that graph G has n nodes and $n-1$ edges.  Graph G' is identical but with n edges
+            We can only make G and G' identical by deleting an edge from G'.  G' has a cycle because all
+            n edges connect n nodes with 1 edge left over.  This edge makes a cycle.
             \item \\
             \item \\
             \item \\
