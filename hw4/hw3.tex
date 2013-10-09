@@ -1,0 +1,49 @@
+
+
+
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage{amsthm,amsmath,amsfonts,amssymb,amstext}
+\usepackage{latexsym,ifthen,url,rotating}
+\usepackage[usenames,dvipsnames]{color}
+
+
+% --- -----------------------------------------------------------------
+% --- Document-specific definitions.
+% --- -----------------------------------------------------------------
+\newtheorem{definition}{Definition}
+
+\newcommand{\concat}{{\,\|\,}}
+\newcommand{\bits}{\{0,1\}}
+\newcommand{\Range}{{\mathrm{Range}}}
+\newcommand{\A}{{\mathcal{A}}}
+
+% --- -----------------------------------------------------------------
+% --- The document starts here.
+% --- -----------------------------------------------------------------
+\begin{document}
+%\maketitle
+
+\noindent CS513: Design and Analysis of Data Structures and Algorithms \\
+        Group: Stewart Smith and Kaushal Parikh\\
+
+        \begin{center}
+        \LARGE{\textbf{Homework 4}}\\
+            \end{center}
+
+            \vspace{.1in}
+
+
+            \begin{enumerate}
+
+            \item \\ 1) Preprocess into a prefix tree, and keep track of the terminating nodes\\
+                     2) Run lca on the two terminating nodes that the user provides to us\\
+                     \\ The run time of the preprocessing is $O(n(logn))$ because we have to fill a prefix tree.\\
+                        The run time of the query is $O(1)$, because we are running the LCA algorithm on it.\\
+            \item \\ I don't know\\
+            \item \\
+            \end{enumerate}
+
+                                \end{document}
+
